@@ -1,17 +1,18 @@
 import java.util.ArrayList;
-
+//Abstract
 public abstract class Main {
-    private ArrayList <Integer> number = new ArrayList <Integer>();
-
+    priv    ate ArrayList <Integer> number = new ArrayList <Integer>();
+    
+//Setter misalnya dibawah ini adalah setNumber
     public void setNumber(int inputNum ) {
         this.number.add(inputNum);
     }
-
+//Getter contohnya dibawah ini getNumber
     public ArrayList<Integer> getNumber() {
         return number;
     }
 }
-
+// SUB-CLASS 
 class BasicCalculator extends Main {
     public int add() {
         int nilai, count;
@@ -25,8 +26,9 @@ class BasicCalculator extends Main {
     public int substract() {
         int nilai, count;
         nilai = (getNumber().get(0)) * 2;
-        for (count = 0;count < getNumber().size();count+=1 ) {
-            nilai = nilai - getNumber().get(count);
+        // contoh pemanggilan method getter 
+        for (count = 0;count < getNumber().size();count+=1 ) { 
+            nilai = nilai - getNumber().get(count); //sepertinya polymorphism 
         }
         return nilai;
     }
@@ -50,6 +52,7 @@ class BasicCalculator extends Main {
     }
 }
 
+//SUB-CLASS
 class ScientificCalculator extends Main {
     public double squareroot() {
         double hasil = Math.sqrt(getNumber().get(0));
