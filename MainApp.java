@@ -1,3 +1,5 @@
+//main class 
+
 import java.util.Scanner;
 
 public class MainApp {
@@ -28,6 +30,7 @@ public class MainApp {
                         System.out.print("Input angka (input x jika sudah) : ");
                         if (masukkan.hasNextInt()) {
                             dataAngka = masukkan.nextInt();
+                            //contoh pemanggilan method setter
                             tambah.setNumber(dataAngka);
                         } else {
                             masukkan.next();
